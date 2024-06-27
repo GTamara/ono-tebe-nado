@@ -1,1 +1,158 @@
-/* место для вашего кода */
+/* ---------- HEADER ------------ */
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    /* border: 1px solid red;
+    padding: 92px 24px 96px; */
+}
+
+.header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    align-items: center;
+    margin-bottom: 96px;
+    padding: 0 50px;
+    margin: 92px 0 96px;
+    color: #000;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.header__logo {
+    display: block;
+    grid-column: 4;
+    width: 136px;
+    /* margin: 0 auto; */
+}
+
+.header__menu {  
+    grid-column: 1 / 4;
+}
+
+.header__links-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    list-style: circle;
+}
+
+.header__links-list-item {
+    
+    
+}
+
+.header__links-list-item:not(:last-child) {
+    /* padding-right: 13px; */
+}
+
+.header__links-list-item:not(.header__link_active) .header__link {
+    border-bottom: 1px solid black;
+}
+
+.header__links-list-item_no-bullit {
+    list-style: none;
+}
+
+.header__link {
+    text-decoration: none;
+}
+
+.header__links-list-item:not(.header__links-list-item_no-bullit) .header__link {
+    margin-left: 3px;
+}
+
+.header__address {
+    grid-column: 6 / 8;
+    font-style: normal;
+    line-height: 24px;
+}
+
+.header__address-content {
+    max-width: 236px;
+    margin-left: auto;
+}
+
+.header__address-link {
+    display: inline-block;
+    border-bottom: 1px solid black;
+    text-decoration: none;
+    text-wrap: nowrap;
+    
+}
+
+/* ---------- COVER ------------ */
+
+.cover {
+    position: relative;
+    background-image: url('../images/cover.jpg');
+    background-size: cover;
+    background-position: center;
+    /* background-size: auto 100%; */
+    color: white;
+    /* удалить */
+    height: 757px; 
+}
+
+.cover:before {
+    position: absolute;
+    inset: 0;
+    content: '';
+    opacity: 0.6;
+    background-color: black;
+    /* @ cover */
+}
+
+.cover__content {
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+    z-index: 1;
+    display: flex;
+    position: relative;
+    padding: 164px 50px 136px;
+}
+
+.cover__title {
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 115px;
+    letter-spacing: 0.3em;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    text-transform: uppercase;
+}
+
+.aligned-text_center {
+    align-self: center;
+}
+
+.aligned-text_right {
+    align-self: flex-end;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.underlined-text {
+    line-height: 18px;
+}
+
+main {  /* удалить */
+}
+
+
+::marker {
+    padding: 12px;
+  }

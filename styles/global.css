@@ -4,12 +4,21 @@
   box-sizing: border-box;
 }
 
+:root {
+  --logo-width: #ff9800;
+}
+ 
+h1 {
+  color: var(--main-color);
+}
+
 body {
-  width: 1100px;
-  margin: 0 auto;
+  /* max-width: 1100px;
+  margin: 0 auto; */
   font-family: Raleway, sans-serif;
 }
 
+body,
 h1,
 h2,
 h3,
