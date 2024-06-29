@@ -1,1 +1,370 @@
-/* место для вашего кода */
+/* ---------- HEADER ------------ */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    margin: 92px 0 92px;
+    color: #000;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.header__logo {
+    display: block;
+    width: var(--logo-width);
+}
+
+.header__menu {  
+    width: calc((100% - var(--logo-width)) / 2);
+}
+
+.header__links-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    list-style: circle;
+}
+
+.header__links-list-item:not(.header__link_active) .header__link {
+    border-bottom: 1px solid black;
+}
+
+.header__links-list-item_no-bullit {
+    list-style: none;
+}
+
+.header__links-list-item:not(.header__links-list-item_no-bullit) .header__link {
+    margin-left: 3px;
+}
+
+.header__address {
+    width: calc((100% - var(--logo-width)) / 2);
+}
+
+.header__address address {
+    margin-left: auto;
+}
+
+
+/* ---------- COVER ------------ */
+
+.cover {
+    position: relative;
+    background-image: url('../images/cover.jpg');
+    background-size: cover;
+    background-position: center;
+    /* background-size: auto 100%; */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.cover__content {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 164px 50px 136px;
+}
+
+.cover__title {
+    z-index: 1;
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 115px;
+    letter-spacing: 0.3em;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-transform: uppercase;
+    margin: 114px 0 136px;
+}
+
+.cover__description {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    font-size: 22px;
+    line-height: 28px;
+    text-transform: uppercase;
+    z-index: 1;
+
+}
+
+.cover__description-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    word-spacing: 0.9em;
+}
+
+.bet-button {
+    border: 1px solid white;
+    background-color: transparent;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    text-transform: inherit;
+    padding: 11px 32px;
+}
+
+
+/* ---------- LOTS ------------ */
+
+.lots {
+    padding: 0 24px;
+}
+
+.lots__heading {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 47px;
+    margin: 0 auto 26px 40px;
+
+}
+
+.lots__card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    align-items: stretch;
+    color: white;
+}
+
+.lots__card-list-item {
+    position: relative;
+    display: flex;
+    list-style: none;
+    flex-basis: calc(33.33% - 50px / 3);
+    background-size: cover;
+    background-position: center;
+}
+
+.card-link {
+    display: flex;
+    flex-direction: column;
+    padding: 51px 40px 48px;
+    z-index: 1;
+}
+
+.card__title {
+    display: inline;
+    font-size: 22px;
+    line-height: 26px;
+    text-transform: uppercase;
+    border-bottom: 1px solid white;
+    font-weight: 700;
+}
+
+.card__text {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;    
+    margin-top: auto;
+}
+
+.lots__look-more-link {
+    display: inline-block;
+    margin: 30px 0 0 40px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    color: inherit;
+    border-bottom: 1px solid black;
+}
+
+.card_type_film {
+    background-image: url('../images/card-lot-01.jpg');
+}
+
+.card_type_book {
+    background-image: url('../images/card-lot-02.jpg');
+}
+
+.card_type_picture {
+    background-image: url('../images/card-lot-03.jpg');
+}
+
+
+/* ---------- ABOUT ------------ */
+
+.about {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 240px auto;
+    grid-template-areas:
+        "logo title title"
+        ". text text";
+    gap: 8px 25px;
+    padding: 1px 24px 0;
+}
+
+.about__start-column {
+    grid-area: logo;
+}
+
+.about__title {
+    grid-area: title;
+}
+
+.about__text {
+    grid-area: text;
+}
+
+
+.about__logo-column {
+    margin: auto;
+}
+
+.about__content-column {
+    flex-grow: 1;
+}
+
+.about__logo {
+    background-color: black;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    padding: 63px 46px;
+    margin: auto;
+}
+
+.about__logo-image {
+    width: 148px;
+}
+
+.about__title {
+    margin: 101px 0 100px
+}
+
+.about__text {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.about__text-paragraph {
+    word-spacing: -1px;
+}
+
+.about__text-paragraph:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+
+/* ---------- FOOTER ------------ */
+
+.footer {
+    display: flex;
+    padding: 0 50px 88px;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.footer__menu {
+    flex-grow: 1;
+}
+
+.footer__menu-list {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer__social {
+    width: 240px;
+}
+
+.footer__social-list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    list-style: none;
+    width: 100%;
+}
+
+.footer__social-link {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+}
+
+
+/* ---------- COMMON STYLES ------------ */
+
+.secondary__heading {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 47px;
+    text-transform: uppercase;
+}
+
+.empty-space-below-section {
+    margin-bottom: 180px;
+}
+
+.aligned-text_center {
+    align-self: center;
+}
+
+.aligned-text_right {
+    align-self: flex-end;
+}
+
+.cover__title-line-height_larger {
+    line-height: 115px;
+}
+
+.cover__title-line-height_smoller {
+    line-height: 100px;
+}
+
+.underlined-text {
+    border-bottom: 1px solid black;
+}
+
+.letter-spacing-extended {
+    letter-spacing: 0.6em;
+}
+
+.no-letter-spacing {
+    letter-spacing: 0;
+}
+
+.block-with-overlay:before {
+    position: absolute;
+    inset: 0;
+    content: '';
+    opacity: 0.6;
+    background-color: black;
+}
+
+.address {
+    max-width: 236px;
+    line-height: 24px;
+    font-style: normal;
+}
+
+.address__link {
+    display: inline-block;
+    text-wrap: nowrap;
+    line-height: 20px;
+}
