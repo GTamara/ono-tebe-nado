@@ -109,7 +109,6 @@
     justify-content: center;
     align-items: center;
     flex-grow: 1;
-    font-family: inherit;
     word-spacing: 0.9em;
 }
 
@@ -118,6 +117,7 @@
     background-color: transparent;
     font-size: inherit;
     line-height: inherit;
+    font-family: inherit;
     color: inherit;
     text-transform: inherit;
     padding: 11px 32px;
@@ -150,6 +150,8 @@
 .lots__card-list-item {
     position: relative;
     display: flex;
+    align-content: stretch;
+    min-height: 563px;
     list-style: none;
     flex-basis: calc(33.33% - 50px / 3);
     background-size: cover;
@@ -159,6 +161,7 @@
 .card-link {
     display: flex;
     flex-direction: column;
+    height: 100%;
     padding: 51px 40px 48px;
     z-index: 1;
 }
@@ -223,7 +226,7 @@
 .about__title {
     grid-area: title;
 
-    margin: 101px 0 100px
+    margin: 101px 0 100px;
 }
 
 .about__text {
